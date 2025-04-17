@@ -37,7 +37,9 @@ Route::get('/listbarang/{id}/{nama}', [ListBarangController::class, 'tampilkan']
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ItemListController;
+use App\Http\controllers\ContactUsController;
 
 Route::get('/login', [LoginController::class, 'index']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/items', [ItemListController::class, 'index']);
+Route::get('/contact_us', [ContactUsController::class, 'index']);
