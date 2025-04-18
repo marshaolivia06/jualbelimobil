@@ -38,8 +38,12 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ItemListController;
 use App\Http\controllers\ContactUsController;
+use App\Http\controllers\ProductController;
+use App\Http\controllers\AboutController;
 
 Route::get('/login', [LoginController::class, 'index']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/items', [ItemListController::class, 'index']);
 Route::get('/contact_us', [ContactUsController::class, 'index']);
+Route::get('/about', [AboutController::class, 'index']);
+Route::get('/produk', [ProductController::class, 'index']);
