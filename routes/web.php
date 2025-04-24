@@ -6,10 +6,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/welcome', function () {
-    return view('welcome');
-
-});
 
 Route::get('/user/{id}', function ($id) {
     return 'User dengan ID ' . $id;
@@ -47,3 +43,8 @@ Route::get('/items', [ItemListController::class, 'index']);
 Route::get('/contact_us', [ContactUsController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index']);
 Route::get('/produk', [ProductController::class, 'index']);
+
+Route::get('/home', function () {
+    return view('pages/home');
+
+});
