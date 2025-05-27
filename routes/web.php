@@ -36,6 +36,7 @@ use App\Http\Controllers\ItemListController;
 use App\Http\controllers\ContactUsController;
 use App\Http\controllers\ProductController;
 use App\Http\controllers\AboutController;
+use App\Http\Controllers\ListProdukController;
 
 Route::get('/login', [LoginController::class, 'index']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
@@ -48,3 +49,6 @@ Route::get('/home', function () {
     return view('pages/home');
 
 });
+
+Route::get('/listproduk', [ListProdukController::class, 'show'] );
+Route::post('/listproduk', [ListProdukController::class, 'simpan'])->name('produk.simpan');
