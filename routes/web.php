@@ -51,4 +51,12 @@ Route::get('/home', function () {
 });
 
 Route::get('/listproduk', [ListProdukController::class, 'show'] );
+// Simpan Produk
 Route::post('/listproduk', [ListProdukController::class, 'simpan'])->name('produk.simpan');
+// Delete
+Route::delete('/listproduk/{id}', [ListProdukController::class, 'delete'])->name('produk.delete');
+// Form edit
+Route::get('/listproduk/{id}/edit', [ListProdukController::class, 'edit'])->name('produk.edit');
+
+// Simpan hasil edit
+Route::put('/listproduk/{id}', [ListProdukController::class, 'update'])->name('produk.update');
